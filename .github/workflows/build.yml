@@ -1,0 +1,48 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Fetch Android SDK pieces
+        run: python3 tools/setup_sdk.py
+
+      - name: Build
+        run: |
+          # CI has no ~/.android/debug.keystore; make a throwaway one.
+          keytool -genkeypair -v \
+            -keystore "$RUNNER_TEMP/ci.keystore" \
+            -storepass android -keypass android \
+            -alias ci -keyalg RSA -keysize 2048 -validity 3650 \
+            -dname "CN=CI, OU=Build, O=Hpoi-Exhobby, C=CN"
+          EXHOBBY_KEYSTORE="$RUNNER_TEMP/ci.keystore" \
+          EXHOBBY_KEYSTORE_PASS="pass:android" \
+          EXHOBBY_KEY_PASS="pass:android" \
+          EXHOBBY_KEY_ALIAS="ci" \
+            bash tools/build.sh
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hpoi-exhobby-apk
+          path: hpoi-exhobby.apk
+          if-no-files-found: error
+
+      - name: Attach to release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: hpoi-exhobby.apk

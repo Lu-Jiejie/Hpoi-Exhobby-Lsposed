@@ -1,0 +1,21 @@
+# build output
+/build/
+
+# reverse-engineering workspace (sample APK, jadx dump, dex dumps)
+# Leading slash: an unanchored "hpoi/" would also swallow app/.../com/kelvin/hpoi/.
+/work/
+/hpoi/
+
+# downloaded SDK
+/sdk/
+
+# build product
+/hpoi-exhobby.apk
+*.idsig
+
+# editor / OS
+.idea/
+.vscode/
+*.iml
+Thumbs.db
+.DS_Store
