@@ -1,4 +1,4 @@
-package com.kelvin.hpoi.exhobby.hook;
+package io.github.lu_jiejie.exhobby.hook;
 
 import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedBridge;

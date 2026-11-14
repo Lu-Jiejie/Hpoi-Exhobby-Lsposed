@@ -1,4 +1,4 @@
-package com.kelvin.hpoi.exhobby;
+package io.github.lu_jiejie.exhobby;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;

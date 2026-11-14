@@ -31,9 +31,9 @@ fi
 
 # Only the network client is Android-free; the loader and UI need a device.
 {
-  to_win "$ROOT/app/src/main/java/com/kelvin/hpoi/exhobby/data/ExhobbyApi.java"
+  to_win "$ROOT/app/src/main/java/io/github/lu_jiejie/exhobby/data/ExhobbyApi.java"
   echo
-  to_win "$ROOT/dev/probe/src/com/kelvin/hpoi/exhobby/data/ApiProbe.java"
+  to_win "$ROOT/dev/probe/src/io/github/lu_jiejie/exhobby/data/ApiProbe.java"
   echo
 } > "$OUT/sources.txt"
 
@@ -43,4 +43,4 @@ javac -encoding UTF-8 -source 11 -target 11 -parameters \
   -classpath "$JAR" -d "$(to_win "$OUT/classes")" @"$(to_win "$OUT/sources.txt")" \
   2>&1 | grep -vE "^(ע|注|warning)" || true
 
-java -cp "$(to_win "$OUT/classes")$SEP$JAR" com.kelvin.hpoi.exhobby.data.ApiProbe "$@"
+java -cp "$(to_win "$OUT/classes")$SEP$JAR" io.github.lu_jiejie.exhobby.data.ApiProbe "$@"

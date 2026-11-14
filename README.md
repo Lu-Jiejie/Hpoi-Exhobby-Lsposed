@@ -10,7 +10,7 @@ Hpoi 官方图库只有官图，ExHobby 上是玩家实拍，两边内容互补�
 
 ## 安装
 
-1. 安装 `hpoi-exhobby.apk`。
+1. 安装 `hpoi-exhobby.apk`（模块包名 `io.github.lu_jiejie.exhobby`）。
 2. LSPosed → 模块 → 启用「Hpoi ExHobby」。
 3. 作用域勾选「Hpoi」（`net.hpoi`）。
 4. 强制停止 Hpoi，重新打开，进任意手办详情页。

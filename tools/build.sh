@@ -82,7 +82,7 @@ javac -encoding UTF-8 \
   -d "$OUT_CLASSES" \
   @"$OUT/sources.txt"
 
-if [ ! -f "$OUT/classes/com/kelvin/hpoi/exhobby/MainHook.class" ]; then
+if [ ! -f "$OUT/classes/io/github/lu_jiejie/exhobby/MainHook.class" ]; then
   echo "!! compilation produced no MainHook.class" >&2
   exit 1
 fi

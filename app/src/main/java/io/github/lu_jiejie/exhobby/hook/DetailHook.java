@@ -1,8 +1,8 @@
-package com.kelvin.hpoi.exhobby.hook;
+package io.github.lu_jiejie.exhobby.hook;
 
 import android.app.Activity;
 
-import com.kelvin.hpoi.exhobby.ui.ExhobbyCard;
+import io.github.lu_jiejie.exhobby.ui.ExhobbyCard;
 
 import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedBridge;

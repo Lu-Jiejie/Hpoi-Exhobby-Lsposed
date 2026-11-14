@@ -1,4 +1,4 @@
-package com.kelvin.hpoi.exhobby.data;
+package io.github.lu_jiejie.exhobby.data;
 
 /**
  * JVM harness for the exhobby client; runs without an emulator.

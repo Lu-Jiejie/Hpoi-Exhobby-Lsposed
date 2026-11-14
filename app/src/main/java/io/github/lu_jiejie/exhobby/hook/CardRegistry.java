@@ -1,6 +1,6 @@
-package com.kelvin.hpoi.exhobby.hook;
+package io.github.lu_jiejie.exhobby.hook;
 
-import com.kelvin.hpoi.exhobby.ui.ExhobbyCard;
+import io.github.lu_jiejie.exhobby.ui.ExhobbyCard;
 
 import java.util.Collections;
 import java.util.Map;

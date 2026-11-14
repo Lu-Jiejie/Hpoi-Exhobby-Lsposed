@@ -1,4 +1,4 @@
-package com.kelvin.hpoi.exhobby.ui;
+package io.github.lu_jiejie.exhobby.ui;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -26,8 +26,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.kelvin.hpoi.exhobby.data.ExhobbyApi;
-import com.kelvin.hpoi.exhobby.data.ImageLoader;
+import io.github.lu_jiejie.exhobby.data.ExhobbyApi;
+import io.github.lu_jiejie.exhobby.data.ImageLoader;
 
 import java.io.File;
 import java.io.FileOutputStream;

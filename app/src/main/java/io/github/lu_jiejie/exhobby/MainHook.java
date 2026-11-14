@@ -1,10 +1,10 @@
-package com.kelvin.hpoi.exhobby;
+package io.github.lu_jiejie.exhobby;
 
-import com.kelvin.hpoi.exhobby.hook.DetailHook;
-import com.kelvin.hpoi.exhobby.hook.HeaderHook;
-import com.kelvin.hpoi.exhobby.hook.HostBridge;
-import com.kelvin.hpoi.exhobby.hook.LifecycleHook;
-import com.kelvin.hpoi.exhobby.hook.XLog;
+import io.github.lu_jiejie.exhobby.hook.DetailHook;
+import io.github.lu_jiejie.exhobby.hook.HeaderHook;
+import io.github.lu_jiejie.exhobby.hook.HostBridge;
+import io.github.lu_jiejie.exhobby.hook.LifecycleHook;
+import io.github.lu_jiejie.exhobby.hook.XLog;
 
 import de.robv.android.xposed.IXposedHookLoadPackage;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;

@@ -1,11 +1,11 @@
-package com.kelvin.hpoi.exhobby.hook;
+package io.github.lu_jiejie.exhobby.hook;
 
 import android.app.Activity;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.kelvin.hpoi.exhobby.ui.ExhobbyCard;
+import io.github.lu_jiejie.exhobby.ui.ExhobbyCard;
 
 import java.util.List;
 
