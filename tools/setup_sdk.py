@@ -77,11 +77,22 @@ def unpack(zip_path, inner, target):
     shutil.rmtree(tmp, ignore_errors=True)
 
 
+def make_executable(root):
+    """zipfile drops the mode bits, so build-tools binaries arrive non-executable."""
+    for name in os.listdir(root):
+        path = os.path.join(root, name)
+        if os.path.isfile(path) and not name.endswith(".jar"):
+            os.chmod(path, 0o755)
+
+
 def main():
     for name, inner, rel in PACKAGES:
         archive = os.path.join(CACHE, name)
         download(BASE + name, archive)
-        unpack(archive, inner, os.path.join(SDK, rel))
+        target = os.path.join(SDK, rel)
+        unpack(archive, inner, target)
+        if rel.startswith("build-tools"):
+            make_executable(target)
     print("SDK ready at %s" % SDK)
     print("next: bash tools/build.sh")
 
